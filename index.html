@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetVerdict — Documentation</title>
+  <meta name="description" content="NetVerdict documentation site — deterministic network simulation, multi-vendor CLI, packet-level replay.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="color-scheme" content="dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #111;
+      --bg-card: #0d0d0d;
+      --text-primary: #e2e8f0;
+      --text-secondary: #a1a1aa;
+      --text-tertiary: #8b8b95;
+      --text-heading: #fafafa;
+      --accent: #00ff88;
+      --accent-dim: #00cc6a;
+      --accent-glow: rgba(0, 255, 136, 0.15);
+      --accent-bg: rgba(0, 255, 136, 0.06);
+      --border: #27272a;
+      --font-heading: 'JetBrains Mono', 'SF Mono', monospace;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-body); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: var(--accent); text-decoration: none; transition: color 150ms ease; }
+    a:hover { color: var(--accent-dim); }
+    main { flex: 1; max-width: 900px; margin: 0 auto; padding: 6rem 2rem 4rem; width: 100%; }
+    .brand { font-family: var(--font-heading); font-weight: 700; font-size: 0.875rem; letter-spacing: 0.1em; color: var(--accent); text-transform: uppercase; margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; }
+    .brand::before { content: ""; display: inline-block; width: 8px; height: 8px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 12px var(--accent-glow); }
+    h1 { font-family: var(--font-heading); font-size: 3rem; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; color: var(--text-heading); margin-bottom: 1rem; }
+    h1 .accent { color: var(--accent); }
+    .tagline { font-size: 1.25rem; color: var(--text-secondary); max-width: 640px; margin-bottom: 3rem; }
+    .status { display: inline-block; padding: 0.5rem 1rem; background: var(--accent-bg); border: 1px solid var(--accent); border-radius: 6px; font-family: var(--font-heading); font-size: 0.875rem; color: var(--accent); margin-bottom: 4rem; }
+    .status::before { content: "● "; }
+    h2 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 600; color: var(--text-heading); margin-bottom: 1.5rem; padding-top: 3rem; border-top: 1px solid var(--border); margin-top: 3rem; padding-top: 3rem; }
+    h2:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+    .grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    @media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .card { padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; transition: border-color 250ms ease, transform 250ms ease; }
+    .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .card h3 { font-family: var(--font-heading); font-size: 1rem; font-weight: 600; color: var(--text-heading); margin-bottom: 0.5rem; }
+    .card p { font-size: 0.9375rem; color: var(--text-secondary); }
+    .card .arrow { color: var(--accent); font-family: var(--font-heading); }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--text-tertiary); font-size: 0.875rem; font-family: var(--font-heading); }
+    code { font-family: var(--font-heading); font-size: 0.875rem; padding: 0.125rem 0.375rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 4px; color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand">NetVerdict</div>
+    <h1>Deterministic <span class="accent">network simulation</span>.</h1>
+    <p class="tagline">Multi-vendor CLI. Packet-level replay. Reproducible verdicts on real-world topologies — without touching production hardware.</p>
+    <div class="status">Documentation site under construction</div>
+
+    <h2>// what's coming</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>CLI reference <span class="arrow">→</span></h3>
+        <p>Auto-generated from <code>packages/core</code> — every supported command, every vendor.</p>
+      </div>
+      <div class="card">
+        <h3>Protocol catalog <span class="arrow">→</span></h3>
+        <p>L2/L3 protocols, FHRP, routing, AAA — what NetVerdict simulates and how.</p>
+      </div>
+      <div class="card">
+        <h3>Lab topologies <span class="arrow">→</span></h3>
+        <p>Reference scenarios for labs, certifications, and incident replay.</p>
+      </div>
+      <div class="card">
+        <h3>Engine internals <span class="arrow">→</span></h3>
+        <p>Verdict engine, RIB, dispatcher, sim event loop — for contributors.</p>
+      </div>
+    </div>
+
+    <h2>// links</h2>
+    <p style="color: var(--text-secondary);">
+      <a href="https://github.com/netverdict">GitHub organization</a>
+      &nbsp;·&nbsp;
+      <a href="https://netverdict.io">netverdict.io</a>
+    </p>
+  </main>
+  <footer>NetVerdict · 2026</footer>
+</body>
+</html>
